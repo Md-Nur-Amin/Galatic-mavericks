@@ -1,10 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Navbar = () => {
+    const navItems = <>
+    <Link className='font-bold  mr-5 relative  hover:text-orange-500 cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]' to='/'>Home</Link>
+
+    <Link className='font-bold  mr-5 relative  hover:text-orange-500 cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]'  to='/about'> About</Link>
+    </>
     return (
         <div>
             <div>
-                <div className="navbar bg-base-100">
+                <div className="navbar bg-">
                     <div className="navbar-start">
                         <div className="dropdown">
                             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -28,28 +34,19 @@ const Header = () => {
                                 <li>
                                     <a>Parent</a>
                                     <ul className="p-2">
-                                        <li><a>Submenu 1</a></li>
-                                        <li><a>Submenu 2</a></li>
+                                    {navItems}
                                     </ul>
                                 </li>
-                                <li><a>Item 3</a></li>
+                               
                             </ul>
                         </div>
-                        <a className="btn btn-ghost text-xl">daisyUI</a>
+                        <Link to='/' className="btn btn-ghost text-xl">daisyUI</Link>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
-                            <li><a>Item 1</a></li>
-                            <li>
-                                <details>
-                                    <summary>Parent</summary>
-                                    <ul className="p-2">
-                                        <li><a>Submenu 1</a></li>
-                                        <li><a>Submenu 2</a></li>
-                                    </ul>
-                                </details>
-                            </li>
-                            <li><a>Item 3</a></li>
+                            
+                            {navItems}
+                           
                         </ul>
                     </div>
                     <div className="navbar-end">
@@ -61,4 +58,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default Navbar;
