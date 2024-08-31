@@ -1,10 +1,10 @@
-import React from 'react';
-
+// import React from 'react';
+import './Footer.css'
 const Footer = () => {
     return (
-        <div>
-            <div>
-                <footer className="footer bg-base-200 text-base-content p-10">
+        <div className="featured-item bg-fixed">
+            <div >
+                <footer className="footer  text-base-content text-white p-10">
                     <aside>
                         <svg
                             width="50"
